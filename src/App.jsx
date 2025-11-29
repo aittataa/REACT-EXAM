@@ -1,9 +1,6 @@
-//import './App.css'
 import InfoVoyage from "./composants/InfoVoyage.jsx";
 import InfoManager from "./composants/InfoManager.jsx";
 import InfoAgence from "./composants/InfoAgence.jsx";
-//src/composants/InfoManager.jsx
-
 
 function App() {
   return (
