@@ -2,43 +2,22 @@ import { useState } from "react"
 //import '../global.css'
 
 function InfoAgence(arg) {
-    const [formData, setformData] = useState({
-        nom: 'Jon DOE', object: 'Hello World', message: 'My Message'
+    const [form, setForm] = useState({
+        nom: 'Hello', object: 'World', message: 'Hello World'
     })
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setformData({
-            ...formData,
+        setForm({
+            ...form,
             [name]: value
         });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(`Formulaire : `, formData)
-        //alert(`Formulaire : `, formData)
+        console.log(form)
     }
-
-    /*return (
-        <>
-            <form onSubmit={handleSubmit}>
-                <p>Firstname</p>
-                <input type="text" name='firstname' value={formData.firstname} onChange={handleChange}></input>
-                <br />
-                <p>Lastname</p>
-                <input type="text" name='lastname' value={formData.lastname} onChange={handleChange}></input>
-                <br />
-                <p>email</p>
-                <input type="email" name='email' value={formData.email} onChange={handleChange}></input>
-                <br />
-                <p>password</p>
-                <input type="password" name='password' value={formData.password} onChange={handleChange}></input>
-                <br />
-                <button type="submit">Submit</button>
-            </form>
-        </>
-    )*/
 
     return (
         <div>
@@ -48,12 +27,12 @@ function InfoAgence(arg) {
 
             <form onSubmit={handleSubmit}>
                 <p>Nom</p>
-                <input type="text" name='nom' value={formData.nom} onChange={handleChange}></input>
+                <input type="text" name='nom' value={form.nom} onChange={handleChange}></input>
                 <p>Objet</p>
-                <input type="text" name='objet' value={formData.object} onChange={handleChange}></input>
+                <input type="text" name='objet' value={form.object} onChange={handleChange}></input>
                 <p>Message</p>
-                <input type="textarea" name='message' value={formData.message} onChange={handleChange}></input>
-                <button type="submit">Submit</button>
+                <input type="textarea" name='message' value={form.message} onChange={handleChange}></input>
+                <button type="submit">Envoyer</button>
             </form>
         </div>
     )
