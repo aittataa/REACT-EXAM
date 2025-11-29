@@ -1,7 +1,7 @@
 import { useState } from "react"
 //import '../global.css'
 
-function InfoAgence() {
+function InfoAgence(arg) {
     const [formData, setformData] = useState({
         nom: 'Jon DOE', object: 'Hello World', message: 'My Message'
     })
@@ -43,19 +43,16 @@ function InfoAgence() {
     return (
         <div>
             <h1>Informations de l'Agence</h1>
-            <h3>Nom de l'agence' : Atlas Travail</h3>
-            <h3>Localisation : Rabat</h3>
+            <h3>Nom de l'agence' : {arg.agence}</h3>
+            <h3>Localisation : {arg.localisation}</h3>
 
             <form onSubmit={handleSubmit}>
                 <p>Nom</p>
                 <input type="text" name='nom' value={formData.nom} onChange={handleChange}></input>
-                <br />
                 <p>Objet</p>
                 <input type="text" name='objet' value={formData.object} onChange={handleChange}></input>
-                <br />
                 <p>Message</p>
                 <input type="textarea" name='message' value={formData.message} onChange={handleChange}></input>
-                <br />
                 <button type="submit">Submit</button>
             </form>
         </div>

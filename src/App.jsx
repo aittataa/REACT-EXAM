@@ -5,9 +5,9 @@ import InfoAgence from "./composants/InfoAgence.jsx";
 function App() {
   return (
     <>
-      <InfoVoyage />
-      <InfoManager />
-      <InfoAgence />
+      <InfoVoyage destination="Chefchaoun" />
+      <InfoManager nom="Yassine" languge="Arabe / Anglis" />
+      <InfoAgence agence="Atlas Travail" localisation="Rabat" />
     </>
   )
 }
